@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas | FNS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/interacoes.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="imagens/logo-fns-compacto.svg">
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header>
+        <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao-principal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <img class="marca-logo" src="imagens/logo-fns.png" alt="Logo FNS: letras integradas a montanhas" width="88" height="88">
+        <div>
+            <p class="marca">Faculdade Nova Serra</p>
+            <p class="marca-subtitulo">Ambiente Virtual de Aprendizagem</p>
+        </div>
+        <div class="perfil-aluno"><span class="avatar" aria-hidden="true">GF</span><div><strong>Gabriel Ferreira</strong><span>Aluno · 2026/1</span></div></div>
+    </header>
+    <nav id="navegacao-principal" class="menu-lateral" aria-label="Menu principal">
+        <a class="menu-marca" href="index.html" aria-label="FNS - página inicial" title="Faculdade Nova Serra"><img src="imagens/logo-fns-compacto.svg" alt="" width="46" height="46"></a>
+        <button class="menu-alternar" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Expandir menu" title="Expandir menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg>
+        </button>
+        <ul id="menu-links">
+            <li><a href="index.html" aria-label="Painel" title="Painel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="menu-texto">Painel</span></a></li>
+            <li><a href="cursos.html" aria-label="Meu curso" title="Meu curso"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span class="menu-texto">Meu curso</span></a></li>
+            <li><a href="disciplina.html" aria-label="Disciplinas" title="Disciplinas"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v16M12 5C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 1Z"/></svg><span class="menu-texto">Disciplinas</span></a></li>
+            <li><a href="tarefas.html" aria-label="Tarefas" title="Tarefas" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="m9 13 2 2 4-5"/></svg><span class="menu-texto">Tarefas</span></a></li>
+            <li><a href="notas.html" aria-label="Notas" title="Notas"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 3v18h17M8 17v-5M13 17V9M18 17V5"/></svg><span class="menu-texto">Notas</span></a></li>
+            <li><a href="suporte.html" aria-label="Suporte" title="Suporte"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 13v-2a8 8 0 0 1 16 0v2M20 17v1a3 3 0 0 1-3 3h-3"/><rect x="2" y="11" width="4" height="7" rx="2"/><rect x="18" y="11" width="4" height="7" rx="2"/></svg><span class="menu-texto">Suporte</span></a></li>
+        </ul>
+        <button class="menu-puxador" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Expandir menu; arraste para a direita ou pressione Enter" title="Arraste para abrir ou fechar o menu"><span aria-hidden="true"></span></button>
+    </nav>
+    <div class="menu-fundo" aria-hidden="true" hidden></div>
+    <main id="conteudo" tabindex="-1">
+        <h1>Tarefas e entregas</h1>
+        <p>Acompanhe os prazos e os resultados das atividades de cada disciplina.</p>
+        <div class="indicadores"><div><strong data-contagem="pendente">3</strong><span>Pendentes</span></div><div><strong data-contagem="entregue">3</strong><span>Em correção</span></div><div><strong data-contagem="avaliada">6</strong><span>Avaliadas</span></div></div>
+        <div class="filtros-tarefas" role="group" aria-label="Filtrar tarefas por situação" hidden>
+            <button type="button" class="filtro" data-filtro="todas" aria-pressed="true">Todas</button>
+            <button type="button" class="filtro" data-filtro="pendente" aria-pressed="false">Pendentes</button>
+            <button type="button" class="filtro" data-filtro="entregue" aria-pressed="false">Em correção</button>
+            <button type="button" class="filtro" data-filtro="avaliada" aria-pressed="false">Avaliadas</button>
+        </div>
+        <p id="resultado-filtro" role="status" aria-live="polite"></p>
+        <p id="tarefas-vazias" class="estado-vazio" hidden></p>
+        <section class="lista-tarefas" id="tarefa-redes" aria-labelledby="titulo-redes"><h2 id="titulo-redes">Redes de Computadores</h2><p class="professor">Prof. Laerte de Marque</p><div class="tabela" tabindex="0" role="region" aria-label="Atividades de Redes de Computadores"><table><caption>Histórico e próximas entregas</caption><thead><tr><th scope="col">Atividade</th><th scope="col">Prazo</th><th scope="col">Situação</th><th scope="col">Nota</th><th scope="col">Entrega</th></tr></thead><tbody><tr data-situacao="avaliada"><th scope="row">A1 · Tipos de redes</th><td><time datetime="2026-03-23">23/03</time></td><td><span class="status status-avaliada">Avaliada</span></td><td>8,50</td><td>—</td></tr><tr data-situacao="avaliada"><th scope="row">A2 · Modelos de comunicação</th><td><time datetime="2026-04-27">27/04</time></td><td><span class="status status-avaliada">Avaliada</span></td><td>9,00</td><td>—</td></tr><tr data-situacao="entregue"><th scope="row">Endereçamento IP</th><td><time datetime="2026-05-18">18/05</time></td><td><span class="status status-entregue">Entregue · em correção</span></td><td>—</td><td>—</td></tr><tr data-situacao="pendente" data-entrega="redes"><th scope="row">Projeto de rede local</th><td><time datetime="2026-06-01">01/06</time></td><td><span class="status status-pendente">Pendente</span></td><td>—</td><td><button class="botao botao-entrega" type="button" data-enviar="redes" hidden>Simular entrega</button><small class="arquivo-entregue" data-arquivo="redes"></small></td></tr></tbody></table></div><p><a href="redes.html">Ver dias de aula</a></p></section>
+<section class="lista-tarefas" id="tarefa-arquitetura" aria-labelledby="titulo-arquitetura"><h2 id="titulo-arquitetura">Organização e Arquitetura de Computadores</h2><p class="professor">Prof. João Tavares</p><div class="tabela" tabindex="0" role="region" aria-label="Atividades de Organização e Arquitetura de Computadores"><table><caption>Histórico e próximas entregas</caption><thead><tr><th scope="col">Atividade</th><th scope="col">Prazo</th><th scope="col">Situação</th><th scope="col">Nota</th><th scope="col">Entrega</th></tr></thead><tbody><tr data-situacao="avaliada"><th scope="row">A1 · Componentes do computador</th><td><time datetime="2026-03-25">25/03</time></td><td><span class="status status-avaliada">Avaliada</span></td><td>8,00</td><td>—</td></tr><tr data-situacao="avaliada"><th scope="row">A2 · Sistemas de numeração</th><td><time datetime="2026-04-29">29/04</time></td><td><span class="status status-avaliada">Avaliada</span></td><td>8,50</td><td>—</td></tr><tr data-situacao="entregue"><th scope="row">Hierarquia de memória</th><td><time datetime="2026-05-20">20/05</time></td><td><span class="status status-entregue">Entregue · em correção</span></td><td>—</td><td>—</td></tr><tr data-situacao="pendente" data-entrega="arquitetura"><th scope="row">Arquitetura de processadores</th><td><time datetime="2026-06-03">03/06</time></td><td><span class="status status-pendente">Pendente</span></td><td>—</td><td><button class="botao botao-entrega" type="button" data-enviar="arquitetura" hidden>Simular entrega</button><small class="arquivo-entregue" data-arquivo="arquitetura"></small></td></tr></tbody></table></div><p><a href="organizacao.html">Ver dias de aula</a></p></section>
+<section class="lista-tarefas" id="tarefa-algoritmos" aria-labelledby="titulo-algoritmos"><h2 id="titulo-algoritmos">Algoritmos 1</h2><p class="professor">Prof. Neiva Kuyven</p><div class="tabela" tabindex="0" role="region" aria-label="Atividades de Algoritmos 1"><table><caption>Histórico e próximas entregas</caption><thead><tr><th scope="col">Atividade</th><th scope="col">Prazo</th><th scope="col">Situação</th><th scope="col">Nota</th><th scope="col">Entrega</th></tr></thead><tbody><tr data-situacao="avaliada"><th scope="row">A1 · Variáveis e operadores</th><td><time datetime="2026-03-27">27/03</time></td><td><span class="status status-avaliada">Avaliada</span></td><td>9,00</td><td>—</td></tr><tr data-situacao="avaliada"><th scope="row">A2 · Estruturas condicionais</th><td><time datetime="2026-04-24">24/04</time></td><td><span class="status status-avaliada">Avaliada</span></td><td>9,50</td><td>—</td></tr><tr data-situacao="entregue"><th scope="row">Laços de repetição</th><td><time datetime="2026-05-22">22/05</time></td><td><span class="status status-entregue">Entregue · em correção</span></td><td>—</td><td>—</td></tr><tr data-situacao="pendente" data-entrega="algoritmos"><th scope="row">Projeto de algoritmos</th><td><time datetime="2026-06-05">05/06</time></td><td><span class="status status-pendente">Pendente</span></td><td>—</td><td><button class="botao botao-entrega" type="button" data-enviar="algoritmos" hidden>Simular entrega</button><small class="arquivo-entregue" data-arquivo="algoritmos"></small></td></tr></tbody></table></div><p><a href="algoritmos.html">Ver dias de aula</a></p></section>
+        <p class="texto-apoio">Demonstração local: o arquivo não é enviado nem armazenado. Apenas seu nome e a situação da entrega são salvos neste navegador. As notas não são alteradas.</p><p class="nota-demonstracao">Cenário acadêmico fictício em 25/05/2026 · semestre 2026/1.</p>
+        <p id="mensagem-interacao" class="mensagem-interacao" role="status" aria-live="polite" aria-atomic="true"></p>
+        <dialog id="dialogo-entrega" aria-labelledby="entrega-titulo" aria-describedby="entrega-explicacao">
+            <form id="form-entrega">
+                <h2 id="entrega-titulo">Simular entrega</h2>
+                <p id="entrega-atividade"></p>
+                <p id="entrega-explicacao">Escolha um arquivo para esta demonstração. Nenhum arquivo será enviado: apenas o nome será registrado neste navegador.</p>
+                <label for="arquivo-entrega">Arquivo da atividade</label>
+                <input id="arquivo-entrega" type="file" required>
+                <div class="acoes-dialogo"><button type="button" class="botao-secundario" id="cancelar-entrega">Cancelar</button><button type="submit" class="botao">Registrar entrega simulada</button></div>
+            </form>
+        </dialog>
+    </main>
+    <footer><p>Faculdade Nova Serra — Projeto acadêmico fictício.</p></footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas | FNS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/interacoes.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="imagens/logo-fns-compacto.svg">
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header>
+        <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao-principal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <img class="marca-logo" src="imagens/logo-fns.png" alt="Logo FNS: letras integradas a montanhas" width="88" height="88">
+        <div>
+            <p class="marca">Faculdade Nova Serra</p>
+            <p class="marca-subtitulo">Ambiente Virtual de Aprendizagem</p>
+        </div>
+        <div class="perfil-aluno"><span class="avatar" aria-hidden="true">GF</span><div><strong>Gabriel Ferreira</strong><span>Aluno · 2026/1</span></div></div>
+    </header>
+    <nav id="navegacao-principal" class="menu-lateral" aria-label="Menu principal">
+        <a class="menu-marca" href="index.html" aria-label="FNS - página inicial" title="Faculdade Nova Serra"><img src="imagens/logo-fns-compacto.svg" alt="" width="46" height="46"></a>
+        <button class="menu-alternar" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Expandir menu" title="Expandir menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg>
+        </button>
+        <ul id="menu-links">
+            <li><a href="index.html" aria-label="Painel" title="Painel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="menu-texto">Painel</span></a></li>
+            <li><a href="cursos.html" aria-label="Meu curso" title="Meu curso"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span class="menu-texto">Meu curso</span></a></li>
+            <li><a href="disciplina.html" aria-label="Disciplinas" title="Disciplinas"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v16M12 5C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 1Z"/></svg><span class="menu-texto">Disciplinas</span></a></li>
+            <li><a href="tarefas.html" aria-label="Tarefas" title="Tarefas"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="m9 13 2 2 4-5"/></svg><span class="menu-texto">Tarefas</span></a></li>
+            <li><a href="notas.html" aria-label="Notas" title="Notas" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 3v18h17M8 17v-5M13 17V9M18 17V5"/></svg><span class="menu-texto">Notas</span></a></li>
+            <li><a href="suporte.html" aria-label="Suporte" title="Suporte"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 13v-2a8 8 0 0 1 16 0v2M20 17v1a3 3 0 0 1-3 3h-3"/><rect x="2" y="11" width="4" height="7" rx="2"/><rect x="18" y="11" width="4" height="7" rx="2"/></svg><span class="menu-texto">Suporte</span></a></li>
+        </ul>
+        <button class="menu-puxador" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Expandir menu; arraste para a direita ou pressione Enter" title="Arraste para abrir ou fechar o menu"><span aria-hidden="true"></span></button>
+    </nav>
+    <div class="menu-fundo" aria-hidden="true" hidden></div>
+    <main id="conteudo" tabindex="-1">
+        <h1>Notas e boletim</h1>
+        <p>Engenharia da Computação · 2026/1</p>
+        <section aria-labelledby="boletim-titulo"><h2 id="boletim-titulo">Desempenho nas disciplinas</h2>
+        <p>A média parcial considera apenas A1 e A2, com o mesmo peso. As próximas atividades ainda não entram no cálculo.</p>
+        <div class="tabela" tabindex="0" role="region" aria-label="Boletim com rolagem horizontal"><table><caption>Avaliações fictícias — notas de 0 a 10</caption><thead><tr><th scope="col">Disciplina</th><th scope="col">A1</th><th scope="col">A2</th><th scope="col">Média parcial</th><th scope="col">Situação</th></tr></thead><tbody><tr><th scope="row"><a href="redes.html">Redes de Computadores</a></th><td>8,50</td><td>9,00</td><td><strong>8,75</strong></td><td>Em andamento</td></tr><tr><th scope="row"><a href="organizacao.html">Organização e Arquitetura de Computadores</a></th><td>8,00</td><td>8,50</td><td><strong>8,25</strong></td><td>Em andamento</td></tr><tr><th scope="row"><a href="algoritmos.html">Algoritmos 1</a></th><td>9,00</td><td>9,50</td><td><strong>9,25</strong></td><td>Em andamento</td></tr></tbody></table></div></section>
+        <section class="painel-abertura" aria-labelledby="resumo-titulo"><h2 id="resumo-titulo">Resumo do semestre</h2><p><strong>8,75</strong> de média entre as três médias parciais · 6 atividades avaliadas.</p><p>Ainda há atividades em correção e pendentes. O resultado final do semestre não foi fechado.</p><a class="botao" href="tarefas.html">Acompanhar atividades</a></section>
+        <p class="nota-demonstracao">Cenário acadêmico fictício em 25/05/2026 · semestre 2026/1.</p>
+        <p id="mensagem-interacao" class="mensagem-interacao" role="status" aria-live="polite" aria-atomic="true"></p>
+    </main>
+    <footer><p>Faculdade Nova Serra — Projeto acadêmico fictício.</p></footer>
+</body>
+</html>

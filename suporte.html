@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte | FNS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/interacoes.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="imagens/logo-fns-compacto.svg">
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header>
+        <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao-principal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <img class="marca-logo" src="imagens/logo-fns.png" alt="Logo FNS: letras integradas a montanhas" width="88" height="88">
+        <div>
+            <p class="marca">Faculdade Nova Serra</p>
+            <p class="marca-subtitulo">Ambiente Virtual de Aprendizagem</p>
+        </div>
+        <div class="perfil-aluno"><span class="avatar" aria-hidden="true">GF</span><div><strong>Gabriel Ferreira</strong><span>Aluno · 2026/1</span></div></div>
+    </header>
+    <nav id="navegacao-principal" class="menu-lateral" aria-label="Menu principal">
+        <a class="menu-marca" href="index.html" aria-label="FNS - página inicial" title="Faculdade Nova Serra"><img src="imagens/logo-fns-compacto.svg" alt="" width="46" height="46"></a>
+        <button class="menu-alternar" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Expandir menu" title="Expandir menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg>
+        </button>
+        <ul id="menu-links">
+            <li><a href="index.html" aria-label="Painel" title="Painel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="menu-texto">Painel</span></a></li>
+            <li><a href="cursos.html" aria-label="Meu curso" title="Meu curso"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span class="menu-texto">Meu curso</span></a></li>
+            <li><a href="disciplina.html" aria-label="Disciplinas" title="Disciplinas"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v16M12 5C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 1Z"/></svg><span class="menu-texto">Disciplinas</span></a></li>
+            <li><a href="tarefas.html" aria-label="Tarefas" title="Tarefas"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="m9 13 2 2 4-5"/></svg><span class="menu-texto">Tarefas</span></a></li>
+            <li><a href="notas.html" aria-label="Notas" title="Notas"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 3v18h17M8 17v-5M13 17V9M18 17V5"/></svg><span class="menu-texto">Notas</span></a></li>
+            <li><a href="suporte.html" aria-label="Suporte" title="Suporte" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 13v-2a8 8 0 0 1 16 0v2M20 17v1a3 3 0 0 1-3 3h-3"/><rect x="2" y="11" width="4" height="7" rx="2"/><rect x="18" y="11" width="4" height="7" rx="2"/></svg><span class="menu-texto">Suporte</span></a></li>
+        </ul>
+        <button class="menu-puxador" type="button" aria-expanded="false" aria-controls="menu-links" aria-label="Expandir menu; arraste para a direita ou pressione Enter" title="Arraste para abrir ou fechar o menu"><span aria-hidden="true"></span></button>
+    </nav>
+    <div class="menu-fundo" aria-hidden="true" hidden></div>
+    <main id="conteudo" tabindex="-1">
+        <h1>Suporte ao aluno</h1>
+        <section aria-labelledby="faq-titulo">
+            <h2 id="faq-titulo">Perguntas frequentes</h2>
+            <details>
+                <summary>Como acessar uma disciplina?</summary>
+                <p>Acesse <a href="disciplina.html">Disciplinas</a> e selecione a disciplina desejada para ver os dias de aula.</p>
+            </details>
+            <details>
+                <summary>Onde encontro minhas atividades?</summary>
+                <p>Na página <a href="tarefas.html">Tarefas</a>, organizada por disciplina.</p>
+            </details>
+            <details>
+                <summary>Onde posso consultar minhas notas?</summary>
+                <p>Acesse a página <a href="notas.html">Notas</a> pelo menu principal.</p>
+            </details>
+        </section>
+        <section aria-labelledby="contato-titulo">
+            <h2 id="contato-titulo">Formulário de contato</h2>
+            <p id="aviso-formulario">Formulário demonstrativo: o envio está desativado e os dados não são armazenados.</p>
+            <form aria-labelledby="contato-titulo" aria-describedby="aviso-formulario">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" required>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="campo">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="disciplinas">Disciplinas</option>
+                        <option value="tarefas">Tarefas</option>
+                        <option value="notas">Notas</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" disabled>Envio indisponível nesta demonstração</button>
+            </form>
+        </section>
+        <p id="mensagem-interacao" class="mensagem-interacao" role="status" aria-live="polite" aria-atomic="true"></p>
+    </main>
+    <footer><p>Faculdade Nova Serra — Projeto acadêmico fictício.</p></footer>
+</body>
+</html>
